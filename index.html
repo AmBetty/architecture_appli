@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP_ARCHITECTURE_APPLICATIVE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<section class="vh-100" style="background-color: #eee;">
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-lg-9 col-xl-7">
+            <div class="card rounded-3">
+                <div class="card-body p-4">
+                    <h4 class="text-center my-3 pb-3">To Do App</h4>
+                    <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" id="task-form">
+                    <div class="col-12 row">
+                        <div class="col-6 mb-4">
+                            <select id="category-select" class="form-control">
+                                <option value="Sélectionner une catégorie">Sélectionner une catégorie</option>
+                                <option value="WORK">Travail</option>
+                                <option value="HOME">Maison</option>
+                                <option value="OTHER">Divers</option>
+                            </select>
+                        </div> 
+                        <div data-mdb-input-init class="form-outline col-6">
+                            <input type="text" id="task-input" class="form-control" required placeholder="Ajouter une tâche"/>
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Ajouter</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" id="filter-button" data-mdb-button-init data-mdb-ripple-init class="btn btn-secondary">Filtrer</button>
+                        </div>
+                    </div>
+                    </form>
+                    <table class="table mb-4" id="task-table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Numéro</th>
+                        <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody id="task-list">
+                    </tbody>
+                    </table>
+                </div>
+            </div> 
+        </div>        
+    </div>
+</div>
+</section>
+<script src="model/model.js"></script>
+<script src="view/view.js"></script>
+<script src="controller/controller.js"></script>
+</body>
+</html>
